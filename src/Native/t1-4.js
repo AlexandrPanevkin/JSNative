@@ -98,3 +98,9 @@ console.log(students.reduce((acc, st)=> {
     delete acc[st.name].name
     return acc
 }))
+
+console.log(students.reduce((acc, el)=>{
+    acc[el.id] = el
+    delete acc[el.id].id
+    return acc
+}, {}))
